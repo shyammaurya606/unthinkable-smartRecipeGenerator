@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const EndSection = ({ onGetStarted }) => {
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
+    <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden text-center">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
@@ -16,27 +17,32 @@ const EndSection = ({ onGetStarted }) => {
           Ready to Experience the Difference?
         </h2>
         <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Join the growing number of organizations that have discovered the advantages of working with a team that combines deep expertise with personal commitment to your success.
+          Join the growing number of organizations that have discovered the
+          advantages of working with a team that combines deep expertise with
+          personal commitment to your success.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* Start Cooking Button */}
           <div
             onClick={onGetStarted}
-            className="relative cursor-pointer inline-flex flex-col items-center justify-center px-10 py-8  rounded-2xl shadow-2xl text-white font-extrabold text-2xl transition-all duration-500 transform hover:scale-110 bg-gradient-to-r from-blue-400 via-pink-500 to-yellow-400 "
+            className="relative cursor-pointer inline-flex flex-col items-center justify-center px-10 py-8 rounded-2xl shadow-2xl text-white font-extrabold text-2xl transition-all duration-500 transform hover:scale-110 bg-gradient-to-r from-blue-400 via-pink-500 to-yellow-400"
           >
-           
             <span>Start Cooking</span>
-
             {/* Shiny hover overlay */}
-            <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-pink-500 to-yellow-400 opacity-0 hover:opacity-100 transition-opacity duration-100 rounded-2xl mix-blend-overlay"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-pink-500 to-yellow-400 opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-2xl mix-blend-overlay"></span>
           </div>
-          
-          <button className="relative cursor-pointer inline-flex flex-col items-center justify-center px-10 py-8  rounded-2xl shadow-2xl text-white font-extrabold text-2xl transition-all duration-500 transform  bg-blue-400 ">
-            {/* <span >📖</span> */}
-            View Sample Recipes
-          </button>
+
+          {/* Sample Recipes Button */}
+          <Link
+            to="/sample-recipes"
+            className="relative cursor-pointer inline-flex flex-col items-center justify-center px-10 py-8 rounded-2xl shadow-2xl text-white font-extrabold text-2xl transition-all duration-500 transform bg-blue-400 hover:bg-blue-500"
+          >
+             Sample Recipes
+          </Link>
         </div>
 
+        {/* Stats section */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             <div className="text-5xl font-bold text-blue-400 mb-2">10K+</div>

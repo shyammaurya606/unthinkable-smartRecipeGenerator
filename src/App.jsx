@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { supabase } from './utils/supabaseClient';
-import AuthForm from './components/Auth/AuthForm';
-import Dashboard from './components/Dashboard/Dashboard';
-import LandingPage from './components/Landing/LandingPage';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { supabase } from "./utils/supabaseClient";
+import AuthForm from "./components/Auth/AuthForm";
+import Dashboard from "./components/Dashboard/Dashboard";
+import LandingPage from "./components/Landing/LandingPage";
+import SampleRecipes from "./components/Landing/SampleRecipes";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -12,7 +14,9 @@ function App() {
   useEffect(() => {
     // Check if user is already logged in
     const getSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       setUser(session?.user || null);
       setLoading(false);
     };
@@ -20,12 +24,12 @@ function App() {
     getSession();
 
     // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, session) => {
-        setUser(session?.user || null);
-        setLoading(false);
-      }
-    );
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((event, session) => {
+      setUser(session?.user || null);
+      setLoading(false);
+    });
 
     return () => subscription.unsubscribe();
   }, []);
@@ -51,15 +55,31 @@ function App() {
     );
   }
 
-  if (user) {
-    return <Dashboard user={user} onLogout={handleLogout} />;
-  }
+  return (
+    <Router>
+      <Routes>
+        {/* Landing & Auth routes */}
+        <Route
+          path="/"
+          element={
+            user ? (
+              <Dashboard user={user} onLogout={handleLogout} />
+            ) : showAuth ? (
+              <AuthForm onAuthSuccess={setUser} onBack={() => setShowAuth(false)} />
+            ) : (
+              <LandingPage onGetStarted={handleGetStarted} />
+            )
+          }
+        />
 
-  if (showAuth) {
-    return <AuthForm onAuthSuccess={setUser} onBack={() => setShowAuth(false)} />;
-  }
+        {/* Sample Recipes page */}
+        <Route path="/sample-recipes" element={<SampleRecipes />} />
 
-  return <LandingPage onGetStarted={handleGetStarted} />;
+        {/* Fallback: redirect to home */}
+        <Route path="*" element={<LandingPage onGetStarted={handleGetStarted} />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
