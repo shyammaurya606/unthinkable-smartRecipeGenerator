@@ -454,6 +454,424 @@ const sampleRecipes = [
       "Use slightly cooled rice; hot rice may curdle yogurt.",
       "Add pomegranate seeds or grated carrots for extra freshness."
     ]
+  },
+  {
+    "id": "indian_011",
+    "title": "Sambar",
+    "description": "A South Indian lentil-based stew made with tamarind, vegetables, and spices.",
+    "prepTime": "20 minutes",
+    "cookTime": "40 minutes",
+    "totalTime": "1 hour",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 cup toor dal",
+      "1 lemon-sized ball tamarind",
+      "1 drumstick, cut into pieces",
+      "1 carrot, chopped",
+      "1 onion, chopped",
+      "2 tomatoes, chopped",
+      "2 green chilies",
+      "2 tablespoons sambar powder",
+      "1/2 teaspoon turmeric powder",
+      "2 tablespoons oil",
+      "1 teaspoon mustard seeds",
+      "1 sprig curry leaves",
+      "2 dried red chilies",
+      "Salt to taste",
+      "Fresh coriander for garnish"
+    ],
+    "instructions": [
+      "Cook toor dal with turmeric in a pressure cooker until soft, mash and keep aside.",
+      "Soak tamarind in warm water and extract pulp.",
+      "In a pot, cook drumstick, carrot, onion, and tomatoes until tender.",
+      "Add tamarind pulp, sambar powder, salt, and simmer for 10 minutes.",
+      "Add cooked dal and mix well. Simmer for another 10 minutes.",
+      "Heat oil in a small pan, add mustard seeds, curry leaves, and dried red chilies. Pour tempering into sambar.",
+      "Garnish with coriander and serve with rice or idli."
+    ],
+    "nutrition": {
+      "calories": "190 kcal per serving",
+      "protein": "8g",
+      "fat": "6g",
+      "carbs": "28g",
+      "fiber": "5g"
+    },
+    "tips": [
+      "Add a teaspoon of jaggery for a sweet balance.",
+      "Use fresh homemade sambar powder for authentic flavor."
+    ]
+  },
+  {
+    "id": "indian_012",
+    "title": "Upma",
+    "description": "A popular South Indian breakfast dish made with semolina and tempered spices.",
+    "prepTime": "10 minutes",
+    "cookTime": "15 minutes",
+    "totalTime": "25 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup rava (semolina)",
+      "2 cups water",
+      "1 onion, chopped",
+      "2 green chilies",
+      "1 teaspoon mustard seeds",
+      "1 teaspoon urad dal",
+      "10 curry leaves",
+      "1 tablespoon ghee or oil",
+      "Salt to taste",
+      "Fresh coriander for garnish"
+    ],
+    "instructions": [
+      "Dry roast semolina until slightly golden and keep aside.",
+      "Heat ghee in a pan, add mustard seeds, urad dal, curry leaves, and green chilies.",
+      "Add onions and sauté until translucent.",
+      "Boil water in a separate pot with salt.",
+      "Slowly add roasted semolina while stirring to avoid lumps.",
+      "Cook for 3–4 minutes until fluffy.",
+      "Garnish with coriander and serve hot."
+    ],
+    "nutrition": {
+      "calories": "200 kcal per serving",
+      "protein": "5g",
+      "fat": "6g",
+      "carbs": "32g",
+      "fiber": "3g"
+    },
+    "tips": [
+      "Add vegetables like peas, carrot, or beans for a wholesome version.",
+      "Use ghee for richer taste."
+    ]
+  },
+  {
+    "id": "indian_013",
+    "title": "Pav Bhaji",
+    "description": "A famous Mumbai street food consisting of spicy mashed vegetables served with buttered pav.",
+    "prepTime": "20 minutes",
+    "cookTime": "30 minutes",
+    "totalTime": "50 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "4 pav buns",
+      "2 potatoes, boiled and mashed",
+      "1 cup mixed vegetables (peas, carrot, beans, cauliflower)",
+      "1 onion, finely chopped",
+      "2 tomatoes, chopped",
+      "2 green chilies",
+      "2 tablespoons pav bhaji masala",
+      "1 teaspoon red chili powder",
+      "2 tablespoons butter",
+      "2 tablespoons oil",
+      "Salt to taste",
+      "Coriander and lemon for garnish"
+    ],
+    "instructions": [
+      "Boil and mash vegetables.",
+      "Heat oil and butter in a pan, add onions and sauté until golden.",
+      "Add tomatoes, green chilies, and cook till mushy.",
+      "Add pav bhaji masala, chili powder, and salt. Cook for 5 minutes.",
+      "Add mashed vegetables, mix well, and simmer for 15 minutes.",
+      "Toast pav buns with butter on a tawa.",
+      "Serve bhaji with buttered pav, coriander, and lemon wedges."
+    ],
+    "nutrition": {
+      "calories": "300 kcal per serving",
+      "protein": "8g",
+      "fat": "12g",
+      "carbs": "42g",
+      "fiber": "6g"
+    },
+    "tips": [
+      "Add a cube of butter on top before serving for authentic taste.",
+      "Mash bhaji thoroughly for a smooth consistency."
+    ]
+  },
+  {
+    "id": "indian_014",
+    "title": "Kadhi Pakora",
+    "description": "A tangy yogurt-based curry with gram flour fritters.",
+    "prepTime": "20 minutes",
+    "cookTime": "40 minutes",
+    "totalTime": "1 hour",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 cups yogurt",
+      "4 tablespoons besan (gram flour)",
+      "1 onion, sliced",
+      "2 green chilies",
+      "1 teaspoon turmeric powder",
+      "1 teaspoon cumin seeds",
+      "1 teaspoon mustard seeds",
+      "1 sprig curry leaves",
+      "Oil for frying",
+      "Salt to taste",
+      "Fresh coriander for garnish"
+    ],
+    "instructions": [
+      "Whisk yogurt with besan, turmeric, and water to form kadhi mixture.",
+      "Cook on low flame, stirring continuously, until it thickens.",
+      "For pakoras, mix besan, onion, salt, and water into a thick batter.",
+      "Deep fry spoonfuls of batter until golden brown.",
+      "Add pakoras to simmering kadhi and cook 10 minutes.",
+      "Prepare tempering with oil, cumin, mustard, curry leaves, and green chilies. Pour over kadhi.",
+      "Garnish and serve hot with rice."
+    ],
+    "nutrition": {
+      "calories": "250 kcal per serving",
+      "protein": "9g",
+      "fat": "12g",
+      "carbs": "28g",
+      "fiber": "4g"
+    },
+    "tips": [
+      "Use sour yogurt for authentic flavor.",
+      "Add pakoras just before serving to keep them soft inside but not mushy."
+    ]
+  },
+  {
+    "id": "indian_015",
+    "title": "Baingan Bharta",
+    "description": "A smoky-flavored mashed eggplant curry with onions, tomatoes, and spices.",
+    "prepTime": "15 minutes",
+    "cookTime": "25 minutes",
+    "totalTime": "40 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 large eggplant",
+      "2 onions, chopped",
+      "2 tomatoes, chopped",
+      "2 green chilies",
+      "1 tablespoon ginger-garlic paste",
+      "1 teaspoon cumin seeds",
+      "1 teaspoon turmeric powder",
+      "1 teaspoon red chili powder",
+      "2 tablespoons oil",
+      "Salt to taste",
+      "Coriander leaves for garnish"
+    ],
+    "instructions": [
+      "Roast eggplant on open flame until skin is charred. Peel and mash.",
+      "Heat oil in a pan, add cumin seeds.",
+      "Add onions and sauté until golden brown.",
+      "Add ginger-garlic paste, tomatoes, and green chilies. Cook till mushy.",
+      "Add turmeric, chili powder, and salt. Mix well.",
+      "Add mashed eggplant and cook for 10 minutes.",
+      "Garnish with coriander and serve with roti."
+    ],
+    "nutrition": {
+      "calories": "150 kcal per serving",
+      "protein": "3g",
+      "fat": "7g",
+      "carbs": "18g",
+      "fiber": "5g"
+    },
+    "tips": [
+      "Roast eggplant directly on flame for smoky flavor.",
+      "Add a little mustard oil for extra punch."
+    ]
+  },
+  {
+    "id": "indian_016",
+    "title": "Matar Paneer",
+    "description": "A popular North Indian curry made with paneer and green peas in tomato gravy.",
+    "prepTime": "15 minutes",
+    "cookTime": "25 minutes",
+    "totalTime": "40 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g paneer, cubed",
+      "1 cup green peas",
+      "2 onions, chopped",
+      "2 tomatoes, pureed",
+      "1 tablespoon ginger-garlic paste",
+      "1 teaspoon cumin seeds",
+      "1 teaspoon turmeric powder",
+      "1 teaspoon garam masala",
+      "1 teaspoon red chili powder",
+      "2 tablespoons oil",
+      "Salt to taste",
+      "Fresh coriander for garnish"
+    ],
+    "instructions": [
+      "Heat oil in a pan, add cumin seeds.",
+      "Add onions and sauté until golden brown.",
+      "Add ginger-garlic paste and cook for 1 minute.",
+      "Add tomato puree, turmeric, chili powder, and salt. Cook until oil separates.",
+      "Add peas and cook 5 minutes.",
+      "Add paneer cubes and garam masala. Simmer for 10 minutes.",
+      "Garnish with coriander and serve hot with roti or rice."
+    ],
+    "nutrition": {
+      "calories": "280 kcal per serving",
+      "protein": "12g",
+      "fat": "16g",
+      "carbs": "20g",
+      "fiber": "4g"
+    },
+    "tips": [
+      "Soak paneer in warm water for 10 minutes before cooking to make it soft.",
+      "Add cream for a richer version."
+    ]
+  },
+  {
+    "id": "indian_017",
+    "title": "Idli",
+    "description": "Soft and fluffy South Indian steamed rice cakes served with chutney and sambar.",
+    "prepTime": "12 hours (fermentation)",
+    "cookTime": "15 minutes",
+    "totalTime": "12 hours 15 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 cups idli rice",
+      "1 cup urad dal",
+      "1/2 teaspoon fenugreek seeds",
+      "Salt to taste",
+      "Water as needed"
+    ],
+    "instructions": [
+      "Soak rice, urad dal, and fenugreek seeds separately for 6 hours.",
+      "Grind urad dal into smooth fluffy batter. Grind rice coarsely.",
+      "Mix batters, add salt, and let ferment overnight.",
+      "Pour batter into greased idli molds and steam for 10–12 minutes.",
+      "Serve hot with chutney and sambar."
+    ],
+    "nutrition": {
+      "calories": "120 kcal per idli",
+      "protein": "4g",
+      "fat": "1g",
+      "carbs": "24g",
+      "fiber": "2g"
+    },
+    "tips": [
+      "Ferment batter in a warm place for best results.",
+      "Add a little poha while grinding for extra softness."
+    ]
+  },
+  {
+    "id": "indian_018",
+    "title": "Dosa",
+    "description": "A thin and crispy South Indian crepe made from fermented rice and lentil batter.",
+    "prepTime": "12 hours (fermentation)",
+    "cookTime": "10 minutes",
+    "totalTime": "12 hours 10 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 cups dosa rice",
+      "1 cup urad dal",
+      "1/2 teaspoon fenugreek seeds",
+      "Salt to taste",
+      "Oil for cooking"
+    ],
+    "instructions": [
+      "Soak rice, urad dal, and fenugreek seeds for 6 hours.",
+      "Grind into a smooth batter and ferment overnight.",
+      "Heat a tawa and pour batter, spreading thinly.",
+      "Drizzle oil around edges and cook until golden and crisp.",
+      "Serve hot with chutney and sambar."
+    ],
+    "nutrition": {
+      "calories": "150 kcal per dosa",
+      "protein": "4g",
+      "fat": "3g",
+      "carbs": "28g",
+      "fiber": "2g"
+    },
+    "tips": [
+      "Cook on medium flame for crisp texture.",
+      "Add a little semolina to batter if it’s too thin."
+    ]
+  },
+  {
+    "id": "indian_019",
+    "title": "Palak Paneer",
+    "description": "A creamy spinach curry with paneer cubes cooked in mild spices.",
+    "prepTime": "15 minutes",
+    "cookTime": "20 minutes",
+    "totalTime": "35 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "250g paneer, cubed",
+      "3 cups spinach leaves",
+      "1 onion, chopped",
+      "2 tomatoes, chopped",
+      "1 tablespoon ginger-garlic paste",
+      "1 green chili",
+      "1 teaspoon cumin seeds",
+      "1 teaspoon garam masala",
+      "2 tablespoons cream",
+      "2 tablespoons oil",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Blanch spinach in hot water, then blend into smooth puree.",
+      "Heat oil in a pan, add cumin seeds.",
+      "Add onions and sauté until golden brown.",
+      "Add ginger-garlic paste, tomatoes, and chili. Cook until mushy.",
+      "Add spinach puree, salt, and simmer 5 minutes.",
+      "Add paneer cubes, garam masala, and cream. Cook 5 minutes.",
+      "Serve hot with naan or rice."
+    ],
+    "nutrition": {
+      "calories": "250 kcal per serving",
+      "protein": "10g",
+      "fat": "15g",
+      "carbs": "18g",
+      "fiber": "4g"
+    },
+    "tips": [
+      "Do not overcook spinach, it may turn bitter.",
+      "Add a pinch of kasuri methi for extra flavor."
+    ]
+  },
+  {
+    "id": "indian_020",
+    "title": "Vegetable Pulao",
+    "description": "A quick and mildly spiced rice dish with vegetables.",
+    "prepTime": "15 minutes",
+    "cookTime": "30 minutes",
+    "totalTime": "45 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cups basmati rice",
+      "2 cups mixed vegetables",
+      "1 onion, sliced",
+      "2 green chilies",
+      "2 bay leaves, 4 cloves, 2 cardamoms",
+      "1 teaspoon cumin seeds",
+      "1 teaspoon turmeric powder",
+      "1 teaspoon garam masala",
+      "2 tablespoons oil/ghee",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Wash and soak rice for 20 minutes.",
+      "Heat oil, add cumin seeds and whole spices.",
+      "Add onions and sauté until golden.",
+      "Add vegetables, turmeric, and salt. Stir fry for 5 minutes.",
+      "Add rice and 4 cups water. Mix well.",
+      "Cook covered on low flame until rice is done.",
+      "Sprinkle garam masala and fluff before serving."
+    ],
+    "nutrition": {
+      "calories": "280 kcal per serving",
+      "protein": "6g",
+      "fat": "9g",
+      "carbs": "44g",
+      "fiber": "4g"
+    },
+    "tips": [
+      "Use basmati rice for fragrance.",
+      "Add fried cashews and raisins for festive pulao."
+    ]
   }
 ];
 

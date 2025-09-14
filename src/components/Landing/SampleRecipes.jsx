@@ -4,6 +4,7 @@ import sampleRecipes from "../../data/recipes"; // your 10 recipes
 
 const SampleRecipes = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const getDifficultyColor = (difficulty) => {
     switch (difficulty?.toLowerCase()) {
@@ -18,15 +19,38 @@ const SampleRecipes = () => {
     }
   };
 
+  // 🔍 Filter recipes by title OR ingredients
+  const filteredRecipes = sampleRecipes.filter((recipe) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      recipe.title.toLowerCase().includes(query) ||
+      recipe.ingredients.some((ing) => ing.toLowerCase().includes(query))
+    );
+  });
+
   return (
     <div className="min-h-screen bg-gray-900 py-10 px-4">
       <h1 className="text-4xl font-bold text-white text-center mb-8">
-        Sample Indian Recipes
+        Sample Indian Recipes ( {sampleRecipes.length} )
       </h1>
 
+      {/* 🔍 Search Bar */}
+      {!selectedRecipe && (
+        <div className="max-w-md mx-auto mb-8">
+          <input
+            type="text"
+            placeholder="Search by recipe name or ingredient..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-800 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+      )}
+
       {selectedRecipe ? (
-        // Recipe Detail View
+        // ✅ Recipe Detail View
         <div className="space-y-6 animate-fade-in">
+          {/* Back & Title */}
           <div className="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-6 sm:p-8">
             <div className="flex flex-col-reverse sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
               <div className="flex-1">
@@ -45,6 +69,7 @@ const SampleRecipes = () => {
               </button>
             </div>
 
+            {/* Info Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
               <div className="text-center p-3 bg-blue-900/30 border border-blue-700 rounded-lg">
                 <div className="text-2xl font-bold text-blue-300">
@@ -77,7 +102,7 @@ const SampleRecipes = () => {
             </div>
           </div>
 
-          {/* Ingredients, Nutrition & Tips */}
+          {/* Ingredients, Nutrition, Tips */}
           <div className="grid lg:grid-cols-3 gap-6">
             <div className="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-6">
               <h2 className="text-xl font-bold text-white mb-4">📝 Ingredients</h2>
@@ -101,7 +126,8 @@ const SampleRecipes = () => {
                     fat: "bg-yellow-500/20 text-yellow-300",
                     carbs: "bg-blue-500/20 text-blue-300",
                   };
-                  const colorClass = bgColors[key.toLowerCase()] || "bg-gray-700 text-gray-200";
+                  const colorClass =
+                    bgColors[key.toLowerCase()] || "bg-gray-700 text-gray-200";
                   return (
                     <div
                       key={key}
@@ -145,29 +171,53 @@ const SampleRecipes = () => {
           </div>
         </div>
       ) : (
-        // Recipe List View
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sampleRecipes.map((recipe) => (
-            <div
-              key={recipe.id}
-              className="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-6 hover:shadow-xl transition-all duration-300 hover:border-blue-500 cursor-pointer"
-              onClick={() => setSelectedRecipe(recipe)}
-            >
-              <h3 className="text-xl font-bold text-white mb-2">{recipe.title}</h3>
-              <p className="text-gray-400 mb-4 line-clamp-2">{recipe.description}</p>
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-sm text-gray-400">⏱️ {recipe.totalTime}</span>
-                <span className="text-sm text-gray-400">👥 {recipe.servings}</span>
-              </div>
-              <span
-                className={`px-2 py-1 rounded-full text-xs font-medium border ${getDifficultyColor(
-                  recipe.difficulty
-                )}`}
-              >
-                {recipe.difficulty}
-              </span>
+        // ✅ Recipe List View
+        <div>
+          {/* Show search results count */}
+          {searchQuery && (
+            <p className="text-gray-300 text-center mb-6">
+              {filteredRecipes.length} result{filteredRecipes.length !== 1 && "s"} found
+              for "<span className="text-blue-400">{searchQuery}</span>"
+            </p>
+          )}
+
+          {filteredRecipes.length === 0 ? (
+            <p className="text-center text-gray-400 mt-10">
+              No recipes found matching your search.
+            </p>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredRecipes.map((recipe) => (
+                <div
+                  key={recipe.id}
+                  className="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-6 hover:shadow-xl transition-all duration-300 hover:border-blue-500 cursor-pointer"
+                  onClick={() => setSelectedRecipe(recipe)}
+                >
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {recipe.title}
+                  </h3>
+                  <p className="text-gray-400 mb-4 line-clamp-2">
+                    {recipe.description}
+                  </p>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm text-gray-400">
+                      ⏱️ {recipe.totalTime}
+                    </span>
+                    <span className="text-sm text-gray-400">
+                      👥 {recipe.servings}
+                    </span>
+                  </div>
+                  <span
+                    className={`px-2 py-1 rounded-full text-xs font-medium border ${getDifficultyColor(
+                      recipe.difficulty
+                    )}`}
+                  >
+                    {recipe.difficulty}
+                  </span>
+                </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
       )}
     </div>
