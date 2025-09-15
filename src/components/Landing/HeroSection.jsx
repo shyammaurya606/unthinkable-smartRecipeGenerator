@@ -3,10 +3,8 @@ import React, { useEffect, useState } from "react";
 const HeroSection = ({ onGetStarted }) => {
   // Local video URLs (stored inside public/videos folder)
   const videoUrls = [
-    "/videos/food1.mp4",
-    "/videos/food2.mp4",
-    "/videos/food3.mp4",
-    "/videos/food4.mp4",
+    "/videos/foodVideo.mp4",
+    
   ];
 
   const [currentVideo, setCurrentVideo] = useState(0);
