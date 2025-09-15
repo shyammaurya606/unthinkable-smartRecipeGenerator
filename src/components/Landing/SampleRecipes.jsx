@@ -1,10 +1,17 @@
 // src/components/Landing/SampleRecipes.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import sampleRecipes from "../../data/recipes"; // your 10 recipes
 
 const SampleRecipes = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+
+  // ✅ Scroll to top only when opening a recipe
+  useEffect(() => {
+    if (selectedRecipe) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [selectedRecipe]);
 
   const getDifficultyColor = (difficulty) => {
     switch (difficulty?.toLowerCase()) {
@@ -30,7 +37,11 @@ const SampleRecipes = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 py-10 px-4">
-      <h1 className="text-4xl font-bold text-white text-center mb-8">
+      {/* ✅ Clickable heading scrolls to top */}
+      <h1
+        className="text-4xl font-bold text-white text-center mb-8 cursor-pointer hover:text-blue-400 transition-colors"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         Sample Indian Recipes ( {sampleRecipes.length} )
       </h1>
 

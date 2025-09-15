@@ -36,9 +36,10 @@ const EndSection = ({ onGetStarted }) => {
           {/* Sample Recipes Button */}
           <Link
             to="/sample-recipes"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} // ✅ scroll to top
             className="relative cursor-pointer inline-flex flex-col items-center justify-center px-10 py-8 rounded-2xl shadow-2xl text-white font-extrabold text-2xl transition-all duration-500 transform bg-blue-400 hover:bg-blue-500"
           >
-             Sample Recipes
+            Sample Recipes
           </Link>
         </div>
 
