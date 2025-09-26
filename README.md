@@ -61,7 +61,7 @@ Click Generate Recipe to view AI-generated recipes or explore pre-built samples.
 Save your favorite recipes to your profile for later access.
 
 
-Future Enhancements --
+# Future Enhancements --
 
 voice command to give ingredients details.
 
