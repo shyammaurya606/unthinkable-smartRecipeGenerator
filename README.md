@@ -1,4 +1,4 @@
-# Smart Recipe Generator 🍳
+# Smart Recipe Generator 🍳 https://smart-recipe-ai-generator.netlify.app/
 
 **Smart Recipe Generator** is a web application that allows users to generate recipes based on the ingredients they provide. Using advanced AI-powered APIs and pre-built sample recipes, the app delivers personalized recipe suggestions in real-time.  
 
