@@ -29,8 +29,8 @@
 
 1. Clone the repository:
 
-git clone https://github.com/shyammaurya606/unthinkable-smartRecipeGenerator.git
-cd smart-recipe-generator
+git clone https://github.com/shyammaurya606/unthinkable-smartRecipeGenerator.git .
+cd smart-recipe-generator.
 Install dependencies:
 
 
