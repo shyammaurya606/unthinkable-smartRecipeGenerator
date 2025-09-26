@@ -43,8 +43,11 @@ Create a .env file in the root directory:
 
 
 REACT_APP_SUPABASE_URL=your_supabase_url
+
 REACT_APP_SUPABASE_KEY=your_supabase_key
+
 REACT_APP_GEMINI_API_KEY=your_gemini_api_key
+
 
 Start the development server:
 npm start
@@ -61,5 +64,7 @@ Save your favorite recipes to your profile for later access.
 Future Enhancements --
 
 voice command to give ingredients details.
+
 Integrate meal planning and shopping list features.
+
 Add user comments and ratings for recipes.
