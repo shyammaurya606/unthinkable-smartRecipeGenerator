@@ -14,12 +14,13 @@ const EndSection = ({ onGetStarted }) => {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Ready to Experience the Difference?
+          Ready to Transform Your Cooking Experience?
         </h2>
         <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Join the growing number of organizations that have discovered the
-          advantages of working with a team that combines deep expertise with
-          personal commitment to your success.
+          Join thousands of food lovers who have discovered 
+          the power of smart recipes that combine personalized recommendations with an intuitive cooking experience.
+          Let us help you create delicious, healthy meals effortlessly with 
+          intelligent features designed to match your taste, lifestyle, and goals.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
