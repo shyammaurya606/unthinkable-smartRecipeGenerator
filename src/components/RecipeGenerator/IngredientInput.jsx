@@ -57,7 +57,7 @@ const IngredientInput = ({ ingredients, setIngredients }) => {
   return (
     <div>
       <label className="block text-sm font-medium text-gray-300 mb-2">
-        Available Ingredients
+        Available Ingredients (Add "only" Keyword to limit the ingredients)
       </label>
       
       <div className="relative">
